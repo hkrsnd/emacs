@@ -1,0 +1,7 @@
+Debugger entered--Lisp error: (void-function color-theme-molokai)
+  (color-theme-molokai)
+  eval-region(50 71 t #[257 "\300\242b\210\301\207" [(71) (color-theme-molokai)] 2 "\n\n(fn IGNORE)"])  ; Reading at buffer position 84
+  eval-defun-2()
+  eval-defun(nil)
+  call-interactively(eval-defun nil nil)
+  command-execute(eval-defun)
