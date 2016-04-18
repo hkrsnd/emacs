@@ -14,12 +14,12 @@
 		   )
                  load-path))
 ;; リスト1 カーソル移動をCtrl-hjklに
-(global-set-key "\C-h" 'backward-char)
-(global-set-key "\C-j" 'next-line)
-(global-set-key "\C-k" 'previous-line)
-(global-set-key "\C-l" 'forward-char)
-(global-set-key "\C-n" 'newline-and-indent)
-(global-set-key "\C-o" 'kill-line)
+;;(global-set-key "\C-h" 'backward-char)
+;;(global-set-key "\C-j" 'next-line)
+;(global-set-key "\C-k" 'previous-line)
+;(global-set-key "\C-l" 'forward-char)
+;(global-set-key "\C-n" 'newline-and-indent)
+;(global-set-key "\C-o" 'kill-line)
 ;; 行をコピーするコマンド
 (defun copy-line (&optional arg)
   (interactive "p")
@@ -32,6 +32,11 @@
 
 ;; カラーテーマ設定
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+;; 行をハイライト
+(global-hl-line-mode t)
+(custom-set-faces
+'(hl-line ((t (:background "gray10"))))
+)
 (load-theme 'monokai t)
 ;; 日本語の設定
 (set-language-environment "Japanese")
@@ -41,7 +46,7 @@
 ;(set-keyboard-coding-system 'utf-8)
 ;(set-buffer-file-coding-system 'utf-8)
 ;(setq default-buffer-file-coding-system 'utf-8)
-;(set-buffer-file-coding-system 'utf-8)
+					;(set-buffer-file-coding-system 'utf-8)
 ;(set-clipboard-coding-system 'utf-8)
 ;; モードごとの色適用
 (global-font-lock-mode t)
@@ -51,6 +56,8 @@
 (menu-bar-mode -1)
 ;;; ツールバーを消す
 (tool-bar-mode -1)
+;;; スクロールバー非表示
+(set-scroll-bar-mode nil)
 ;;; カーソルの点滅を止める
 (blink-cursor-mode 0)
 ;;; 対応する括弧を光らせる。
@@ -60,8 +67,8 @@
  					; 行数表示
 (global-linum-mode t)
 ; フォント
-;(add-to-list 'default-frame-alist '(font . "Ricty Diminished-13"))
-(add-to-list 'default-frame-alist '(font . "Osaka－等幅-13"))
+(add-to-list 'default-frame-alist '(font . "Ricty Diminished-13"))
+;(add-to-list 'default-frame-alist '(font . "Osaka－等幅-13"))
 
 ; 極力UTF-8とする
 (prefer-coding-system 'utf-8)
@@ -117,3 +124,20 @@
 ;; ensime
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+
+;; SBCLをデフォルトのCommon Lisp処理系に設定
+(setq inferior-lisp-program "sbcl")
+;; ~/.emacs.d/slimeをload-pathに追加
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/slime"))
+
+(setq inferior-lisp-program "clisp")
+;; SLIMEのロード
+(require 'slime)
+(slime-setup '(slime-repl slime-fancy slime-banner))
+;;括弧の補完
+;
+(global-set-key (kbd "(") 'skeleton-pair-insert-maybe)
+(global-set-key (kbd "{") 'skeleton-pair-insert-maybe)
+(global-set-key (kbd "[") 'skeleton-pair-insert-maybe)
+(global-set-key (kbd "\"") 'skeleton-pair-insert-maybe)
+(setq skeleton-pair 1)

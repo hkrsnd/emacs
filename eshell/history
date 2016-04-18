@@ -1,0 +1,128 @@
+cmake -DBUILD_SHARED_LIBS=OFF ..make -j8
+ls
+cd bin
+ls
+cp opencv-2411.jar ~/handMotion/lib/
+cd ~/handMotion/
+ls
+sbt
+ls
+echo $JAVA_HOME
+ls
+cd $JAVA_HOME
+java -v
+java --v
+java --version
+java
+java -version
+which java
+cp ./lib/opencv-2411.jar  /usr/java/jdk1.8.0_25/lib/
+sudo cp ./lib/opencv-2411.jar  /usr/java/jdk1.8.0_25/lib/
+sbt
+ls
+cd lib/
+ls
+ls
+cp opencv-2411.jar opencv_java2411.jar
+ls
+cd ..
+ls
+sbt
+ｌｓ
+ls
+ls
+ls
+vim ~/.bashrc 
+ls
+ls
+ls
+ls
+cd handDetectionCV/
+ls
+ls
+cd Linux\ Version/
+ls
+cd ~/.
+ls
+ls
+mkdir HandMotion
+cd HandMotion
+ls
+ls
+ls
+g++ cameracapture.cpp 
+g++ cameracapture.cpp 
+g++ cameracapture.cpp 
+g++ cameracapture.cpp 
+g++ cameracapture.cpp 
+cd ~/
+ls
+cd Downloads/
+cd opencv-2.4.11/
+ls
+mkdir releas
+cd releas/
+ls
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
+cd ~
+ls
+cd Downloads/opencv-2.4.11/
+ls
+cd build/
+ls
+ls
+cd ~/Desktop/opencv-2.4.11/
+ls
+ls
+mkdir release
+cd release/
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
+sudo cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
+cmake -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON	  -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D	  INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D	  WITH_QT=ON -D WITH_OPENGL=ON -D WITH_VTK=ON ..
+cmake -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON	  -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON -D	  INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D	  WITH_QT=ON -D WITH_OPENGL=ON -D WITH_VTK=ON ..
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
+ls
+ls
+cd ~/HandMotion/
+ls
+g++ cameracapture.cpp 
+g++ cameracapture.cpp 
+g++ cameracapture.cpp 
+g++ cameracapture.cpp 
+g++ cameracapture.cpp 
+g++ cameracapture.cpp  pkg-config --cflags --libs 
+g++ cameracapture.cpp pkg-config --cflags --libs 
+pkg-config opencv --libs
+g++ -o capture cameracapture.cpp  `pkg-config opencv --cflags --libs` 
+g++ -o capture cameracapture.cpp  `pkg-config opencv --cflags --libs` 
+g++ `pkg-config --cflags opencv` cameracapture.cpp  `pkg-config --libs opencv` -o camera
+g++ `pkg-config --cflags opencv` cameracapture.cpp  `pkg-config --libs opencv` -o camera
+g++ cameracapture.cpp -o capture `pkg-config --cflags --libs opencv`
+g++ cameracapture.cpp 
+g++ `pkg-config opencv --cflags --libs` cameracapture.cpp  -o cam
+cmake --help-policy CMP0059
+cd ~/handDetectionCV/
+ls
+cd Linux\ Version/
+ls
+g++ -o opencv main.cpp myImage.cpp handGesture.cpp roi.cpp  `pkg-config --cflags --libs opencv` 
+ls
+cd opencv
+ls
+cd ~
+cd .ssh/
+emacs
+vim
+ls
+cd ~
+ls
+(def x 5)
+(define x 5)
+ls
+cd ~/.emacs.d/
+ls
+git clone https://github.com/slime/slime.git
+ls
+cd slime/
+cd ..
+ls
