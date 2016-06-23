@@ -130,7 +130,8 @@ Also affects 'linum-mode' background."
        (gray-l                   "#6b6b6b")
        ;; Adaptive colors
        (monokai-fg               "#F8F8F2")
-       (monokai-bg               "#272822")
+       ;(monokai-bg               "#272822")
+       (monokai-bg               "#121212")
        (monokai-hl               "#49483E")
        (monokai-hl-line          "#49483E")
        (monokai-emph             "#F8F8F0")

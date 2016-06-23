@@ -1,10 +1,3 @@
-cmake -DBUILD_SHARED_LIBS=OFF ..make -j8
-ls
-cd bin
-ls
-cp opencv-2411.jar ~/handMotion/lib/
-cd ~/handMotion/
-ls
 sbt
 ls
 echo $JAVA_HOME
@@ -125,4 +118,11 @@ git clone https://github.com/slime/slime.git
 ls
 cd slime/
 cd ..
+ls
+ls
+cd jikken2/
+cd ..
+cd jikken3/
+ls
+git pull
 ls

@@ -32,12 +32,21 @@
 
 ;; カラーテーマ設定
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
+					;(load-theme 'monokai t)
+					;(load-theme 'solarized t)
+(load-theme 'monokai t)
 ;; 行をハイライト
 (global-hl-line-mode t)
 (custom-set-faces
-'(hl-line ((t (:background "gray10"))))
-)
-(load-theme 'monokai t)
+ '(hl-line ((t (:background "HotPink4"))))
+ )
+
+;; for window system
+;(if window-system 
+;    (progn
+;      (set-frame-parameter nil 'alpha 85)))
+
 ;; 日本語の設定
 (set-language-environment "Japanese")
 ;;(prefer-coding-system 'utf-8)
@@ -67,8 +76,8 @@
  					; 行数表示
 (global-linum-mode t)
 ; フォント
-(add-to-list 'default-frame-alist '(font . "Ricty Diminished-13"))
-;(add-to-list 'default-frame-alist '(font . "Osaka－等幅-13"))
+;(add-to-list 'default-frame-alist '(font . "Ricty Diminished-11"))
+(add-to-list 'default-frame-alist '(font . "Osaka－等幅-11"))
 
 ; 極力UTF-8とする
 (prefer-coding-system 'utf-8)
@@ -130,7 +139,6 @@
 ;; ~/.emacs.d/slimeをload-pathに追加
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/slime"))
 
-(setq inferior-lisp-program "clisp")
 ;; SLIMEのロード
 (require 'slime)
 (slime-setup '(slime-repl slime-fancy slime-banner))
@@ -141,3 +149,27 @@
 (global-set-key (kbd "[") 'skeleton-pair-insert-maybe)
 (global-set-key (kbd "\"") 'skeleton-pair-insert-maybe)
 (setq skeleton-pair 1)
+
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
+
+(require 'package)
+;;; either the stable version:
+
+(add-to-list 'package-archives
+  ;; choose either the stable or the latest git version:
+  ;; '("melpa-stable" . "http://melpa-stable.org/packages/")
+  '("melpa-unstable" . "http://melpa.org/packages/"))
+
+(package-initialize)
+
+;; YaTeX mode
+(setq auto-mode-alist
+    (cons (cons "\\.tex$" 'yatex-mode) auto-mode-alist))
+(autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
+(setq tex-command "platex")
+(setq dviprint-command-format "dvipdfmx %s")
+;; use Preview.app
+(setq dvi2-command "open -a Preview")
+(setq bibtex-command "pbibtex")
+(put 'upcase-region 'disabled nil)
